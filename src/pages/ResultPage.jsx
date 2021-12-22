@@ -13,11 +13,11 @@ function ResultPage() {
         <p>Total Question: <b>{quontity}</b></p>
         <p>Correct Answears: <b>{correct}</b></p>
         <p>Incorrect Answears: <b>{quontity - correct}</b></p>
-        <p className="result-page__percent"><b>Result is: {(correct / quontity * 100).toFixed(2)}%</b></p>
+        <p><b className="result-page__percent">Result is: {(correct / quontity * 100).toFixed(2)}%</b></p>
         <h3>{correct / quontity * 100 > 90 ? "Good Job!!!" : "Try again!!!" }</h3>
         <div>
-          <Link className="home-btn" to="/">Home</Link>
-          <Link className="game-btn" to="/game">Game</Link>
+          <Link className="home-btn link" to="/">Home</Link>
+          <Link className="game-btn link" to="/game">Game</Link>
         </div>
       </div>
     </div>

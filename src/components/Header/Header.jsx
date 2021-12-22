@@ -55,7 +55,7 @@ function Header() {
         />
         <button className="btn add-word-btn" onClick={addWords}>Add</button>
         {
-          engArr.length > 1 ? <Link className="start-btn" to="/game">Start</Link> : null
+          engArr.length > 1 ? <Link className="start-btn link" to="/game">Start</Link> : null
         }
       </div>
         <h4 className="quantity-of-words">Quantity of words: {engArr.length}</h4>

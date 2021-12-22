@@ -14,7 +14,7 @@ function Words() {
 
   return(
     <div className="words-wrapper">
-      <div className="orange">
+      <div>
         {
           engArr.map(word => (
             <p key={word.id} className="word-item">
@@ -26,9 +26,9 @@ function Words() {
       <div>
         {
           uzbArr.map(word => (
-            <p key={word.id} className="word-item">
+            <p key={word.id}>
               {word.content}&nbsp;
-              <button className="del-btn" onClick={() => deleteWordItem(word.id)}>x</button>
+              <button className="del-btn btn" onClick={() => deleteWordItem(word.id)}>x</button>
             </p>
           ))
         }

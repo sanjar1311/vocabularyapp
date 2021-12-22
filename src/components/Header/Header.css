@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   background-color: #777;
-  height: 100vh;
+  min-height: 100vh;
   font-size: 20px;
 }
 
@@ -38,15 +38,6 @@
   border: 2px solid coral;
   color: #fff;
   background-color: coral;
-  transition: all .4s ease;
-  padding: 9px 20px;
-  font-size: 18px;
-}
-
-.add-word-btn:hover {
-  background-color: #fff;
-  color: coral;
-  border: 2px solid coral;
 }
 
 .quantity-of-words {
@@ -54,24 +45,10 @@
 }
 
 .start-btn {
-  text-decoration: none;
   background-color: rgb(70, 252, 80);
-  margin: 0;
-  padding: 0;
   display: block;
   padding: 5px 8px;
-  border-radius: 4px;
-  text-align: center;
   margin-left: 10px;
-}
-
-.start-btn:hover {
-  background-color: #fff;
-}
-
-.start-btn:active {
-  background-color: darkgrey;
-  color: dodgerblue;
 }
 
 @media all and (max-width: 768px) {

@@ -49,9 +49,9 @@ function GamePage() {
     <div className="game-page">
       
       <div className="game-page-inner">
-        <h4 className="question-word">{uzbArr[randomNum].content}</h4>
+        <h4 className={checkingResult ? "correct question-word" : "incorrect question-word"}>{uzbArr[randomNum].content}</h4>
         <input
-          className={checkingResult ? "correct check-input" : "incorrect check-input"}
+          className="check-input"
           type="text"
           placeholder="Enter Translate The Word"
           value={checked}
@@ -59,7 +59,7 @@ function GamePage() {
           ref={checkRef}
           required="required"
         />
-        <button className={checkingResult ? "correct btn check-btn" : "incorrect btn check-btn"} onClick={checkButton}>Check</button>
+        <button className="btn check-btn" onClick={checkButton}>Check</button>
 
         <div className="bill">
           <span className="bill__correct">{correct}</span>
@@ -67,13 +67,13 @@ function GamePage() {
           <span>{quontity}</span>
         </div>
 
+        <div>
+          <Link className="link back-link" to="/">Home</Link>
+          <button className="btn return-btn" onClick={returnGame}>Return</button>
+          <Link to="/result" className="link result-btn" onClick={()=> resu.play()}>Result</Link>
+        </div>
       </div>
 
-      <div>
-        <Link to="/result" className="btn result-btn" onClick={()=> resu.play()}>Result</Link>
-        <button className="btn return-btn" onClick={returnGame}>Return</button>
-        <Link className="btn back-link" to="/">Home</Link>
-      </div>
     </div>
   )
 }

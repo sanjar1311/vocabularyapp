@@ -1,258 +1,137 @@
+/* G A M E    P A G E S */
+
 .game-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #ddd;
-  height: 100vh;
-}
-
-.game-page-inner {
-  display: flex;
-  align-items: center;
-}
-
-.question-word {
-  min-width: 200px;
-  text-align: center;
-  background-color: coral;
-  color: #fff;
-  padding: 10px;
-  border-radius: 4px;
-  font-size: 26px;
-}
-
-.check-input {
-  padding: 10px 20px;
-  font-size: 18px;
-  margin: 0 15px; 
-  border: 2px solid transparent;
-}
-
-.check-input:focus {
-  outline: transparent;
-  border: 2px solid grey;
-}
-
-.check-btn {
-  padding: 9px 15px;
-  font-size: 17px;
-}
-
-.check-btn:hover {
-  opacity: .5;
-}
-
-.check-btn:active {
-  opacity: .3;
-}
-
-.correct {
-  border-color: rgb(68, 255, 68);
-}
-
-.incorrect {
-  border-color: rgb(255, 48, 11);
-}
-
-.result-btn {
-  padding: 9px 15px;
-  background-color: dodgerblue;
-  color: #fff;
-  font-size: 17px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  border: none;
-  border-radius: 4px;
-  text-decoration: none;
-}
-
-.result-btn:hover {
-  background-color: rgba(30, 144, 255, .8);
-}
-
-.result-btn:active {
-  background-color: rgba(30, 144, 255, .6);
-}
-
-.return-btn {
-  padding: 10px 15px;
-  background-color: grey;
-  color: #fff;
-  font-size: 17px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  border: none;
-  border-radius: 4px;
-  margin: 0 15px;
-}
-
-.return-btn:hover {
-  background-color: rgba(128, 128, 128, .8);
-}
-
-.return-btn:active {
-  background-color: rgba(128, 128, 128, .6);
-}
-
-.back-link {
-  padding: 9px 15px;
-  background-color: rgb(0, 195, 255);
-  color: #fff;
-  font-size: 17px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  border: none;
-  border-radius: 4px;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.back-link:hover {
-  background-color: rgba(0, 195, 255, .8);
-}
-
-.back-link:active {
-  background-color: rgba(0, 195, 255, .6);
-}
-
-.bill {
-  font-size: 24px;
-  font-weight: 700;
-  margin-left: 15px;
-}
-
-.bill__correct {
-  color: rgb(47, 252, 47);
-}
-
-.bill__correct + span {
-  color: grey;
-}
-
-
-/* R E S U L T   P A G E */
-
-
-.result-page {
-  background-color: #999;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-}
-
-.result-page__inner {
-  height: 50vh;
-  max-width: 50vw;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 60px 150px;
-  background-color: #888;
-  border: 1px solid #777;
+  background-color: rgba(30, 144, 255, .4);
+  min-height: 100vh;
+}
+
+.game-page-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(30, 144, 255, .3);
+  padding: 25px 50px;
   border-radius: 10px;
-  box-shadow: 0 0 15px 4px rgba(0, 0, 0, .4);
+  box-shadow: 0 0 15px 15px rgba(30, 144, 255, .2);
+  border: 1px solid rgba(30, 144, 255, .2);
+}
+
+.question-word {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  background-color: green;
+  padding: 15px 0;
+  border-radius: 4px;
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+
+.check-input {
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  font-size: 17px;
+  border-radius: 4px;
+}
+
+.check-input:focus {
+  outline: none;
+}
+
+.check-btn {
+  background-color:rgb(43, 221, 43);
+  color: #fff;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.bill {
+  width: 30px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.back-link {
+  background-color: dodgerblue;
+  color: #fff;
+}
+.return-btn {
+  background-color: green;
+  color: #fff;
+  margin: 0 15px;
+}
+.result-btn {
+  background-color: blue;
+  color: #fff;
+}
+
+
+/* R E S U L T   P A G E S */
+
+
+.result-page {
+  background-color: rgba(63, 24, 236, 0.1);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.result-page__inner {
+  background-color: #aaa;
+  padding: 20px 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, .2);
+  color: #333;
+  margin-top: -150px;
+}
+
+.result-page__title {
+  margin: 0;
+  font-size: 36px;
+  color: coral;
+  letter-spacing: 2px;
 }
 
 .result-page__inner p {
   font-size: 18px;
-}
-
-.result-page__inner b {
-  font-size: 22px;
+  letter-spacing: 1px;
 }
 
 .result-page__inner h3 {
-  font-size: 26px;
-  color: rgb(30, 252, 30);
-}
-
-.result-page__title {
-  color: coral;
-  font-size: 36px;
-  margin: 0;
+  color: greenyellow;
 }
 
 .result-page__percent {
-  color: rgb(4, 70, 136);
+  color: rgb(14, 74, 134);
+  font-size: 24px;
 }
 
 .home-btn {
-  padding: 9px 15px;
-  background-color: rgb(0, 195, 255);
+  background-color: dodgerblue;
+  margin: 5px;
   color: #fff;
-  font-size: 17px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  border: none;
-  border-radius: 4px;
-  text-decoration: none;
-  display: inline-block;
-  margin-right: 15px;
 }
-
-.home-btn:hover {
-  background-color: rgba(0, 195, 255, .8);
-}
-
-.home:active {
-  background-color: rgba(0, 195, 255, .6);
-}
-
 .game-btn {
-  padding: 9px 15px;
-  background-color: rgb(63, 214, 49);
+  background-color: rgb(27, 185, 27);
+  margin: 5px;
   color: #fff;
-  font-size: 17px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  border: none;
-  border-radius: 4px;
-  text-decoration: none;
-  display: inline-block;
 }
 
-.game-btn:hover {
-  background-color: rgba(63, 214, 49, .8);
+.correct {
+  background-color: greenyellow;
 }
 
-.game-btn:active {
-  background-color: rgba(63, 214, 49, .6);
-}
-
-
-@media all and (max-width: 768px) {
-  .game-page-inner {
-    flex-direction: column;
-  }
-
-  .orange {
-    padding-left: 15px;
-  }
-
-  .check-btn {
-    width: 90%;
-    display: block;
-    margin-top: 15px;
-  }
-
-  .result-page__inner {
-    padding: 60px 100px 80px 100px;
-  }
-
-  .bill {
-    margin-left: 0;
-  }
-
-  .check-input {
-    width: 80vw;
-    border-radius: 5px;
-  }
-}
-
-@media all and (max-width: 550px) {
-  .result-page__inner {
-    padding: 60px 60px 70px 60px;
-  }
+.incorrect {
+  background-color: rgba(255, 68, 68, .5);
 }
