@@ -10,6 +10,8 @@ import "./Header.css"
 function Header() {
   const [eng, setEng] = useState("");
   const [uzb, setUzb] = useState("");
+  // const [engError, setEngEror] = useState(false)
+  // const [uzbError, setUzbEror] = useState(false)
   
   const engRef = useRef(null)
 
@@ -20,12 +22,14 @@ function Header() {
   }, [])
 
   const addWords = () => {
-    let uid = uuidv4();
-    setEngArr([...engArr, {content: eng, id: uid}])
-    setEng("")
-    setUzbArr([...uzbArr, {content: uzb, id: uid}])
-    setUzb("")
-    engRef.current.focus()
+    if(eng.length >=2 && uzb.length >= 2) {
+      let uid = uuidv4();
+      setEngArr([...engArr, {content: eng, id: uid}])
+      setEng("")
+      setUzbArr([...uzbArr, {content: uzb, id: uid}])
+      setUzb("")
+      engRef.current.focus()
+    }
   }
   
   useEffect(()=> {

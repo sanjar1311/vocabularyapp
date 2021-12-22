@@ -26,17 +26,19 @@ function GamePage() {
   },[])
   
   const checkButton = () => {
-    setRandomNum((Math.random() * (engArr.length - 1)).toFixed(0));
-    setChecked("")
-    checkRef.current.focus();
-    setQuontity(prev => prev + 1)
-    if(engArr[randomNum].content === checked) {
-      setCheckingResult(true)
-      corr.play();
-      setCorrect(prev => prev + 1)
-    } else {
-      setCheckingResult(false)
-      wro.play()
+    if(checked.length >= 2) {
+      setRandomNum((Math.random() * (engArr.length - 1)).toFixed(0));
+      setChecked("")
+      checkRef.current.focus();
+      setQuontity(prev => prev + 1)
+      if(engArr[randomNum].content === checked) {
+        setCheckingResult(true)
+        corr.play();
+        setCorrect(prev => prev + 1)
+      } else {
+        setCheckingResult(false)
+        wro.play()
+      }
     }
   }
 
