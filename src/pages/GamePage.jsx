@@ -31,7 +31,7 @@ function GamePage() {
       setChecked("")
       checkRef.current.focus();
       setQuontity(prev => prev + 1)
-      if(engArr[randomNum].content === checked) {
+      if((engArr[randomNum].content.toLowerCase()) === checked.toLowerCase()) {
         setCheckingResult(true)
         corr.play();
         setCorrect(prev => prev + 1)

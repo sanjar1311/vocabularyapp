@@ -10,8 +10,6 @@ import "./Header.css"
 function Header() {
   const [eng, setEng] = useState("");
   const [uzb, setUzb] = useState("");
-  // const [engError, setEngEror] = useState(false)
-  // const [uzbError, setUzbEror] = useState(false)
   
   const engRef = useRef(null)
 
